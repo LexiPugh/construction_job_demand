@@ -5,7 +5,7 @@
 -   [Introduction](#introduction)
 -   [Task 1: Explore the Jobs Data](#explore-the-jobs-data)
 -   [Task 2: Explore the Weather Data](#explore-the-weather-data)
--   [Task 3: Weather's Affect on Job Demand](#affect-of-weather-on-job-demand)
+-   [Task 3: Affect of Weather on Job Demand](#affect-of-weather-on-job-demand)
 -   [Task 4: Dashboard of Results](#dashboard-of-results)
 
 # Introduction
