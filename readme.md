@@ -5,7 +5,7 @@
 -   [Introduction](#introduction)
 -   [Task 1: Explore the Jobs Data](#explore-the-jobs-data)
 -   [Task 2: Explore the Weather Data](#explore-the-weather-data)
--   [Task 3: Weather's Affect on Job Demand](#visualizing-and-analyzing-using-tableau)
+-   [Task 3: Weather's Affect on Job Demand](#affect-of-weather-on-job-demand)
 -   [Task 4: Dashboard of Results](#dashboard-of-results)
 
 # Introduction
@@ -54,6 +54,8 @@ ORDER BY
   month
 ```
 - Visualize the result table. Is there any seasonality to the job requests? Is there a season that has more requests than others?
+
+![Visualization of job requests by month](figs/cjd_jobs_by_month.png)
 
 There is seasonality to the construction job requests. Winter has the least number of job requests while early Spring and late Summer months like May, June, July, and August have the highest number of job requests.
 
@@ -105,6 +107,8 @@ GROUP BY
 ORDER BY
   month
 ```
+![Visualization of adverse weather by month for all states](figs/cjd_weather_all_states.png)
+
 - The weather data includes values for all 50 states. Modify your query once more so that it only shows information from the states that are seen in the jobs data. Visualize the filtered data and compare the filtered data to the original data.
 
 Method 1: Using a Subquery to Filter
@@ -149,13 +153,15 @@ ORDER BY
   month
 ```
 
+![Visualization of adverse weather by month for select states](figs/cjd_weather_filtered_states.png)
+
 - Write a few-sentence summary describing the relationship between the job requests and weather events.
 
 Job requests and weather events have a positive relationship; as weather events increase, construction job requests increase. Adverse weather events also seem to be more common during the summer, which is why job requests are more common during the summer. These observations all make sense; adverse weather events such as hurricanes, tornados, and extreme storms are more common in the summer. Adverse weather events commonly cause damage to buildings, which is causing a spike in construction job requests during the summer months. 
 
 ------------------------------------------------------------------------
 
-# Weather's Affect on Job Demand
+# Affect of Weather on Job Demand
 
 - A colleague of yours already wrote a query that returns the total number of weather events grouped at the weekly level for each state in the weather data. Write a query that performs a join on the jobs table and the weekly_weather_events table your colleague created. From the jobs table, select job_deliverable, job_location_region_code, and the week of job_first_upload_complete_datetime. From the weekly_weather_events table, select n_weather_events.
   
@@ -200,7 +206,9 @@ ORDER BY
 ```
 - Create a scatterplot of the total number of weather events and the total number of job requests. Be sure to show the trendline. Is there a relationship between adverse weather events and job requests?
 
-Yes, this scatterplot shows that there is a positive linear relationship between adverse weather events and job requests. The more weather events occur, the more job requests come in.
+![Visualization of job requests by adverse weather](figs/cjd_jobs_by_weather.png)
+
+Yes, this scatterplot shows that there is a positive linear relationship between adverse weather events and construction job requests. The more adverse weather events occur, the more construction job requests come in.
 
 
 
@@ -210,3 +218,4 @@ Yes, this scatterplot shows that there is a positive linear relationship between
 
 [Click Here to View the Deliverable in Tableau Public](https://public.tableau.com/views/LexiPughConstructionJobDemand/ConstructionJobDemand?:language=en-US&:display_count=n&:origin=viz_share_link)
 
+![Dashboard displaying the relationship between adverse weather and construction jobs](figs/cjd_dashboard.png)
