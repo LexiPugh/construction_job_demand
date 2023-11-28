@@ -84,7 +84,7 @@ ORDER BY
 ``` SQL
 SELECT
   DATE_TRUNC('month', datetime) AS month,
-  COUNT(*) as number_of_events
+  COUNT(*) AS number_of_events
 FROM
   hover.weather
 GROUP BY
@@ -97,7 +97,7 @@ ORDER BY
 ``` SQL
 SELECT
   DATE_TRUNC('month', datetime) AS month,
-  COUNT(*) as number_of_events
+  COUNT(*) AS number_of_events
 FROM
   hover.weather
 WHERE
@@ -120,7 +120,7 @@ FROM
   hover.weather
 WHERE
   datetime >= '2016-09-01'
-  and state IN (
+  AND state IN (
     SELECT
       DISTINCT job_location_region_code
     FROM
@@ -172,8 +172,8 @@ SELECT
   DATE_TRUNC('week', j.job_first_upload_complete_datetime) AS job_week,
   w.n_weather_events
 FROM
-  hover.jobs as j
-  INNER JOIN hover.weekly_weather_events as w 
+  hover.jobs AS j
+  INNER JOIN hover.weekly_weather_events AS w 
   ON w.state = j.job_location_region_code
   AND DATE_TRUNC('week', j.job_first_upload_complete_datetime) = w.weather_ts
 ```
@@ -194,8 +194,8 @@ FROM
       DATE_TRUNC('week', j.job_first_upload_complete_datetime) AS job_week,
       w.n_weather_events
     FROM
-      hover.jobs as j
-      INNER JOIN hover.weekly_weather_events as w ON w.state = j.job_location_region_code
+      hover.jobs AS j
+      INNER JOIN hover.weekly_weather_events AS w ON w.state = j.job_location_region_code
       AND DATE_TRUNC('week', j.job_first_upload_complete_datetime) = w.weather_ts
   ) AS s
 GROUP BY
