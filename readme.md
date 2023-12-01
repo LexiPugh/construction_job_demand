@@ -64,7 +64,7 @@ appeared an equal number of times in a GROUP BY. Can you write a query that coun
 ``` SQL
 SELECT
   DATE_PART('month', job_first_upload_complete_datetime) AS month,
-  COUNT(DISTINCT date_trunc('month', job_first_upload_complete_datetime)) AS count_of_month
+  COUNT(DISTINCT DATE_TRUNC('month', job_first_upload_complete_datetime)) AS count_of_month
 FROM 
   hover.jobs
 GROUP BY 
