@@ -2,16 +2,25 @@
 
 **Table of Contents**
 
--   [Introduction](#introduction)
+-   [Project Overview](#project-overview)
+-   [Dataset Description](#dataset-description)
 -   [Task 1: Explore the Jobs Data](#explore-the-jobs-data)
 -   [Task 2: Explore the Weather Data](#explore-the-weather-data)
 -   [Task 3: Affect of Weather on Job Demand](#affect-of-weather-on-job-demand)
 -   [Task 4: Dashboard of Results](#dashboard-of-results)
 
-# Introduction
+# Project Overview
 
-In this assignment, you’ll analyze data regarding construction
-jobs and the role weather might play in driving future demand. Companies in this space need to be able to assess what future demand will look like in order to allocate resources and teams accordingly. Sending a small team to a location may mean potential customers will go with a competitor because they can getthe job done in a shorter time frame due to your limited resources.
+This project was completed in SQLPad and Tableau Desktop. In this project, I was looking at data from Hover, a company that transforms smartphone photos into accurate 3D models. The goal of the project was to analyze if adverse weather events affect demand for construction jobs so that Hover can properly staff for seasons that tend to be busier. A list of tasks that I completed in this project include:
+
+- Leveraged subqueries to filter weather events based on distinct region codes
+- Used the DATE_TRUNC and DATE_PART functions to extract month and week values from time series data
+- Merged the jobs and weekly weather table by doing a JOIN on regions and timestamps
+- Leveraged aggregation functions such as COUNT and SUM to quantify the number of jobs and the number of adverse weather events
+- Utilized Tableau Desktop to visualize the relationship between adverse weather and construction job requests
+- Created a visually appealing and well-organized dashboard to enhance data comprehension and data storytelling
+
+# Dataset Description
 
 The data needed for this assignment (hover.*) comes from two different sources.
 
